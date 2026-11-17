@@ -1,3 +1,5 @@
+> **Benchmark copy.** This repository is an unmodified copy of [WordPress/gutenberg](https://github.com/WordPress/gutenberg) at commit [`9a15a99931a9e72e329daaf477e70317892a14c3`](https://github.com/WordPress/gutenberg/commit/9a15a99931a9e72e329daaf477e70317892a14c3), used to benchmark CI runners on the project's own Playwright suite. It is not affiliated with or endorsed by the project. The only changes: this note, `.github/workflows/bench.yml` (run by hand only), and the project's other GitHub Actions workflows and Dependabot config removed so nothing runs on its own. The project's license applies (see the license file). Each benchmark run's logs and test results are saved on the [`bench-results`](../../tree/bench-results) branch.
+
 # Gutenberg
 
 [![End-to-End Tests](https://github.com/WordPress/gutenberg/workflows/End-to-End%20Tests/badge.svg)](https://github.com/WordPress/gutenberg/actions?query=workflow%3A%22End-to-End+Tests%22+branch%3Atrunk)
