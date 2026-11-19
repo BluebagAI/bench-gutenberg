@@ -1,0 +1,38 @@
+{
+ "at": "2026-11-19T04:28:18+00:00",
+ "suite": "gutenberg",
+ "repo": "BluebagAI/bench-gutenberg",
+ "runner": "blacksmith-4",
+ "shards": "1",
+ "note": "measured",
+ "run": "https://github.com/BluebagAI/bench-gutenberg/actions/runs/44457282258",
+ "run_id": 44457282258,
+ "sha": "14d3b2fdfca74f9d17b586d54d7b5ef30c87f705",
+ "conclusion": "failure",
+ "wall_s": 631,
+ "queue_s": 7,
+ "job_s": 4126,
+ "jobs": 11,
+ "job_max_s": 507,
+ "vcpu_min": 275.1,
+ "billed_min": 74,
+ "usd": 0.592,
+ "tests": {
+  "passed": 2839,
+  "failed": 2,
+  "flaky": 5,
+  "skipped": 20,
+  "failed_tests": [
+   "editor/blocks/links.spec.js::can be created and modified using only the keyboard::chromium",
+   "editor/various/font-size-picker.spec.js::should reset a named font size using input field::chromium"
+  ],
+  "flaky_tests": [
+   "editor/blocks/buttons.spec.js::can apply named colors::chromium",
+   "editor/blocks/buttons.spec.js::copies attributes when inserting a sibling via the appender::chromium",
+   "editor/blocks/navigation-colors.spec.js::As a user I expect my navigation to use the colors I selected for it::chromium",
+   "editor/various/font-size-picker.spec.js::should apply a named font size using the font size buttons::chromium",
+   "editor/various/font-size-picker.spec.js::should reset a named font size using the tools panel menu::chromium"
+  ],
+  "files": 8
+ }
+}
