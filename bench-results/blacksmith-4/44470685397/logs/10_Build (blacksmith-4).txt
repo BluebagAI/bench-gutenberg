@@ -1,0 +1,808 @@
+﻿2026-11-19T06:14:22.2846034Z Current runner version: '2.338.2'
+2026-11-19T06:14:22.2849390Z Runner name: 'blacksmith-4vcpu-ubuntu-2404-sqwpfmr52d2fbreb'
+2026-11-19T06:14:22.2850017Z Runner group name: 'blacksmith scale sets - blacksmith-4vcpu-ubuntu-2404'
+2026-11-19T06:14:22.2850707Z Machine name: 'ip-172-31-73-130'
+2026-11-19T06:14:22.2852053Z ##[group]GITHUB_TOKEN Permissions
+2026-11-19T06:14:22.2852541Z Contents: read
+2026-11-19T06:14:22.2852851Z Metadata: read
+2026-11-19T06:14:22.2853182Z ##[endgroup]
+2026-11-19T06:14:22.2854388Z Secret source: Actions
+2026-11-19T06:14:22.2854880Z Cache mode: write
+2026-11-19T06:14:22.2855276Z Prepare workflow directory
+2026-11-19T06:14:22.3029226Z Prepare all required actions
+2026-11-19T06:14:22.3055426Z Getting action download info
+2026-11-19T06:14:22.6087074Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-19T06:14:22.6393016Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-11-19T06:14:23.5015642Z Setting BLACKSMITH_ACTIONS_RESULTS_URL to https://results-receiver.actions.githubusercontent.com/
+2026-11-19T06:14:23.5056402Z Complete job name: Build (blacksmith-4)
+2026-11-19T06:14:23.5420686Z A job started hook has been configured by the self-hosted runner administrator
+2026-11-19T06:14:23.5510249Z ##[group]Run '/setup.sh'
+2026-11-19T06:14:23.5524098Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-19T06:14:23.5524599Z env:
+2026-11-19T06:14:23.5524886Z   BLACKSMITH_RUNNER_MESSAGE_WAIT_MS: 227
+2026-11-19T06:14:23.5525248Z   BLACKSMITH_RUNNER_ACQUIRE_JOB_MS: 868
+2026-11-19T06:14:23.5525592Z   BLACKSMITH_CHECK_RUN_ID: 135379121746
+2026-11-19T06:14:23.5525997Z   BLACKSMITH_JOB_DISPLAY_NAME: Build (blacksmith-4)
+2026-11-19T06:14:23.5526585Z   GITHUB_ACTIONS_CACHE_MODE: write
+2026-11-19T06:14:23.5526935Z ##[endgroup]
+2026-11-19T06:14:23.5777616Z Logging daemon started (blacksmithd for logs)
+2026-11-19T06:14:23.5876784Z Results daemon started (blacksmithd for results)
+2026-11-19T06:14:23.6023275Z Background adoption and SSH setup started (PID: 3265)
+2026-11-19T06:14:23.6024040Z 
+2026-11-19T06:14:23.6024691Z ----------------------------------------
+2026-11-19T06:14:23.6025957Z View this job: https://app.blacksmith.sh/BluebagAI/runs/44470685397/jobs/135379121746
+2026-11-19T06:14:23.6026959Z SSH Access (using your GitHub SSH key):
+2026-11-19T06:14:23.6028972Z   ssh -p 64002 runner@blacksmith-4vcpu-ubuntu-2404-sqwpfmr52d2fbreb.vm.blacksmith.sh
+2026-11-19T06:14:23.6029727Z 
+2026-11-19T06:14:23.6030077Z No GitHub SSH key? Add one at:
+2026-11-19T06:14:23.6031136Z https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+2026-11-19T06:14:23.6032080Z 
+2026-11-19T06:14:23.6032436Z ----------------------------------------
+2026-11-19T06:14:23.6032863Z 
+2026-11-19T06:14:23.6033221Z VM ID: blacksmith-4vcpu-ubuntu-2404-sqwpfmr52d2fbreb
+2026-11-19T06:14:23.6033978Z Host: production-192.240.241.103-x8664
+2026-11-19T06:14:23.6034671Z Host Agent PID: 2891684
+2026-11-19T06:14:23.6035185Z Host Agent Git SHA: 0116ed667
+2026-11-19T06:14:23.6035576Z Host CPU Manufacturer: AuthenticAMD
+2026-11-19T06:14:23.6036055Z Blacksmith Host Generation: gen 2
+2026-11-19T06:14:23.6036463Z Petname: production-sound-pegasus-027abd58
+2026-11-19T06:14:23.6036891Z Region: us-west
+2026-11-19T06:14:23.6037291Z Rootfs Version: ubuntu24-full-x64-081926
+2026-11-19T06:14:23.6048506Z OS Version: Ubuntu 24.04.4 LTS
+2026-11-19T06:14:23.6049051Z 
+2026-11-19T06:14:23.6049357Z Enabling Blacksmith transparent cache
+2026-11-19T06:14:23.6414595Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-11-19T06:14:23.6415093Z with:
+2026-11-19T06:14:23.6415370Z   show-progress: false
+2026-11-19T06:14:23.6415667Z   persist-credentials: false
+2026-11-19T06:14:23.6416053Z   repository: BluebagAI/bench-gutenberg
+2026-11-19T06:14:23.6418199Z   token: ***
+2026-11-19T06:14:23.6418467Z   ssh-strict: true
+2026-11-19T06:14:23.6419138Z   ssh-user: git
+2026-11-19T06:14:23.6419438Z   clean: true
+2026-11-19T06:14:23.6419807Z   sparse-checkout-cone-mode: true
+2026-11-19T06:14:23.6420165Z   fetch-depth: 1
+2026-11-19T06:14:23.6420438Z   fetch-tags: false
+2026-11-19T06:14:23.6420712Z   lfs: false
+2026-11-19T06:14:23.6420981Z   submodules: false
+2026-11-19T06:14:23.6421409Z   set-safe-directory: true
+2026-11-19T06:14:23.6421766Z   allow-unsafe-pr-checkout: false
+2026-11-19T06:14:23.6422099Z env:
+2026-11-19T06:14:23.6422374Z   BLACKSMITH_RUNNER_MESSAGE_WAIT_MS: 227
+2026-11-19T06:14:23.6422779Z   BLACKSMITH_RUNNER_ACQUIRE_JOB_MS: 868
+2026-11-19T06:14:23.6423147Z   GITHUB_REPO_NAME: BluebagAI/bench-gutenberg
+2026-11-19T06:14:23.6423501Z ##[endgroup]
+2026-11-19T06:14:23.7380225Z Syncing repository: BluebagAI/bench-gutenberg
+2026-11-19T06:14:23.7382046Z ##[group]Getting Git version info
+2026-11-19T06:14:23.7382607Z Working directory is '/home/runner/_work/bench-gutenberg/bench-gutenberg'
+2026-11-19T06:14:23.7383438Z [command]/usr/local/bin/git version
+2026-11-19T06:14:23.7431045Z git version 2.55.0
+2026-11-19T06:14:23.7441650Z ##[endgroup]
+2026-11-19T06:14:23.7447188Z Temporarily overriding HOME='/home/runner/_work/_temp/665e9517-fe55-494c-8345-962de0ab7fde' before making global git config changes
+2026-11-19T06:14:23.7447970Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-19T06:14:23.7450953Z [command]/usr/local/bin/git config --global --add safe.directory /home/runner/_work/bench-gutenberg/bench-gutenberg
+2026-11-19T06:14:23.7479480Z Deleting the contents of '/home/runner/_work/bench-gutenberg/bench-gutenberg'
+2026-11-19T06:14:23.7480742Z ##[group]Determining repository object format
+2026-11-19T06:14:23.7481552Z ##[endgroup]
+2026-11-19T06:14:23.7484318Z ##[group]Initializing the repository
+2026-11-19T06:14:23.7484781Z [command]/usr/local/bin/git init /home/runner/_work/bench-gutenberg/bench-gutenberg
+2026-11-19T06:14:23.7520819Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-19T06:14:23.7521463Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-19T06:14:23.7522008Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-19T06:14:23.7522453Z hint: call:
+2026-11-19T06:14:23.7522707Z hint:
+2026-11-19T06:14:23.7523048Z hint: 	git config --global init.defaultBranch <name>
+2026-11-19T06:14:23.7523421Z hint:
+2026-11-19T06:14:23.7579189Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-19T06:14:23.7580119Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-19T06:14:23.7580553Z hint:
+2026-11-19T06:14:23.7580842Z hint: 	git branch -m <name>
+2026-11-19T06:14:23.7581135Z hint:
+2026-11-19T06:14:23.7581505Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-19T06:14:23.7582112Z Initialized empty Git repository in /home/runner/_work/bench-gutenberg/bench-gutenberg/.git/
+2026-11-19T06:14:23.7583440Z [command]/usr/local/bin/git remote add origin https://github.com/BluebagAI/bench-gutenberg
+2026-11-19T06:14:23.7584409Z ##[endgroup]
+2026-11-19T06:14:23.7584855Z ##[group]Disabling automatic garbage collection
+2026-11-19T06:14:23.7585253Z [command]/usr/local/bin/git config --local gc.auto 0
+2026-11-19T06:14:23.7586125Z ##[endgroup]
+2026-11-19T06:14:23.7586542Z ##[group]Setting up auth
+2026-11-19T06:14:23.7586847Z Removing SSH command configuration
+2026-11-19T06:14:23.7587301Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-19T06:14:23.7602672Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-19T06:14:23.7739000Z Removing HTTP extra header
+2026-11-19T06:14:23.7742756Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-19T06:14:23.7771981Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-19T06:14:23.7872969Z Removing includeIf entries pointing to credentials config files
+2026-11-19T06:14:23.7878313Z [command]/usr/local/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-19T06:14:23.7907340Z [command]/usr/local/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-19T06:14:23.8049183Z [command]/usr/local/bin/git config --file /home/runner/_work/_temp/git-credentials-ab1467fa-0e5e-4590-9743-15253c7742fb.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-19T06:14:23.8083948Z [command]/usr/local/bin/git config --local includeIf.gitdir:/home/runner/_work/bench-gutenberg/bench-gutenberg/.git.path /home/runner/_work/_temp/git-credentials-ab1467fa-0e5e-4590-9743-15253c7742fb.config
+2026-11-19T06:14:23.8107820Z [command]/usr/local/bin/git config --local includeIf.gitdir:/home/runner/_work/bench-gutenberg/bench-gutenberg/.git/worktrees/*.path /home/runner/_work/_temp/git-credentials-ab1467fa-0e5e-4590-9743-15253c7742fb.config
+2026-11-19T06:14:23.8133539Z [command]/usr/local/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-ab1467fa-0e5e-4590-9743-15253c7742fb.config
+2026-11-19T06:14:23.8160220Z [command]/usr/local/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-ab1467fa-0e5e-4590-9743-15253c7742fb.config
+2026-11-19T06:14:23.8184716Z ##[endgroup]
+2026-11-19T06:14:23.8185498Z ##[group]Fetching the repository
+2026-11-19T06:14:23.8189928Z [command]/usr/local/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +14d3b2fdfca74f9d17b586d54d7b5ef30c87f705:refs/remotes/origin/main
+2026-11-19T06:14:25.0496319Z From https://github.com/BluebagAI/bench-gutenberg
+2026-11-19T06:14:25.0497672Z  * [new ref]         14d3b2fdfca74f9d17b586d54d7b5ef30c87f705 -> origin/main
+2026-11-19T06:14:25.0527435Z [command]/usr/local/bin/git branch --list --remote origin/main
+2026-11-19T06:14:25.0548668Z   origin/main
+2026-11-19T06:14:25.0554304Z [command]/usr/local/bin/git rev-parse refs/remotes/origin/main
+2026-11-19T06:14:25.0574089Z 14d3b2fdfca74f9d17b586d54d7b5ef30c87f705
+2026-11-19T06:14:25.0576865Z ##[endgroup]
+2026-11-19T06:14:25.0578082Z ##[group]Determining the checkout info
+2026-11-19T06:14:25.0579456Z ##[endgroup]
+2026-11-19T06:14:25.0580560Z [command]/usr/local/bin/git sparse-checkout disable
+2026-11-19T06:14:25.0608627Z [command]/usr/local/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-19T06:14:25.0629299Z ##[group]Checking out the ref
+2026-11-19T06:14:25.0631387Z [command]/usr/local/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-19T06:14:25.4021972Z Switched to a new branch 'main'
+2026-11-19T06:14:25.4023875Z branch 'main' set up to track 'origin/main'.
+2026-11-19T06:14:25.4031810Z ##[endgroup]
+2026-11-19T06:14:25.4068369Z [command]/usr/local/bin/git log -1 --format=%H
+2026-11-19T06:14:25.4091860Z 14d3b2fdfca74f9d17b586d54d7b5ef30c87f705
+2026-11-19T06:14:25.4097608Z ##[group]Removing auth
+2026-11-19T06:14:25.4099053Z Removing SSH command configuration
+2026-11-19T06:14:25.4100376Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-19T06:14:25.4124140Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-19T06:14:25.4243994Z Removing HTTP extra header
+2026-11-19T06:14:25.4245749Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-19T06:14:25.4272545Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-19T06:14:25.4400260Z Removing includeIf entries pointing to credentials config files
+2026-11-19T06:14:25.4401883Z [command]/usr/local/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-19T06:14:25.4424181Z includeif.gitdir:/home/runner/_work/bench-gutenberg/bench-gutenberg/.git.path
+2026-11-19T06:14:25.4426015Z includeif.gitdir:/home/runner/_work/bench-gutenberg/bench-gutenberg/.git/worktrees/*.path
+2026-11-19T06:14:25.4427409Z includeif.gitdir:/github/workspace/.git.path
+2026-11-19T06:14:25.4428517Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-19T06:14:25.4431242Z [command]/usr/local/bin/git config --local --get-all includeif.gitdir:/home/runner/_work/bench-gutenberg/bench-gutenberg/.git.path
+2026-11-19T06:14:25.4452000Z /home/runner/_work/_temp/git-credentials-ab1467fa-0e5e-4590-9743-15253c7742fb.config
+2026-11-19T06:14:25.4460790Z [command]/usr/local/bin/git config --local --unset includeif.gitdir:/home/runner/_work/bench-gutenberg/bench-gutenberg/.git.path \/home\/runner\/_work\/_temp\/git\-credentials\-ab1467fa\-0e5e\-4590\-9743\-15253c7742fb\.config
+2026-11-19T06:14:25.4485287Z [command]/usr/local/bin/git config --local --get-all includeif.gitdir:/home/runner/_work/bench-gutenberg/bench-gutenberg/.git/worktrees/*.path
+2026-11-19T06:14:25.4504576Z /home/runner/_work/_temp/git-credentials-ab1467fa-0e5e-4590-9743-15253c7742fb.config
+2026-11-19T06:14:25.4510807Z [command]/usr/local/bin/git config --local --unset includeif.gitdir:/home/runner/_work/bench-gutenberg/bench-gutenberg/.git/worktrees/*.path \/home\/runner\/_work\/_temp\/git\-credentials\-ab1467fa\-0e5e\-4590\-9743\-15253c7742fb\.config
+2026-11-19T06:14:25.4534783Z [command]/usr/local/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-19T06:14:25.4553615Z /github/runner_temp/git-credentials-ab1467fa-0e5e-4590-9743-15253c7742fb.config
+2026-11-19T06:14:25.4559316Z [command]/usr/local/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-ab1467fa\-0e5e\-4590\-9743\-15253c7742fb\.config
+2026-11-19T06:14:25.4582973Z [command]/usr/local/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-19T06:14:25.4602742Z /github/runner_temp/git-credentials-ab1467fa-0e5e-4590-9743-15253c7742fb.config
+2026-11-19T06:14:25.4607918Z [command]/usr/local/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-ab1467fa\-0e5e\-4590\-9743\-15253c7742fb\.config
+2026-11-19T06:14:25.4634062Z [command]/usr/local/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-19T06:14:25.4755872Z Removing credentials config '/home/runner/_work/_temp/git-credentials-ab1467fa-0e5e-4590-9743-15253c7742fb.config'
+2026-11-19T06:14:25.4760628Z ##[endgroup]
+2026-11-19T06:14:25.4991582Z Prepare all required actions
+2026-11-19T06:14:25.4992650Z Getting action download info
+2026-11-19T06:14:25.6504993Z Download action repository 'actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1' (SHA:949feb2413d6458794dcd2491c4babbbce0c15c1)
+2026-11-19T06:14:26.2470404Z Download action repository 'actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)
+2026-11-19T06:14:26.3265463Z ##[group]Run ./.github/setup-node
+2026-11-19T06:14:26.3265628Z with:
+2026-11-19T06:14:26.3265768Z   cache: true
+2026-11-19T06:14:26.3265922Z env:
+2026-11-19T06:14:26.3266067Z   BLACKSMITH_RUNNER_MESSAGE_WAIT_MS: 227
+2026-11-19T06:14:26.3266256Z   BLACKSMITH_RUNNER_ACQUIRE_JOB_MS: 868
+2026-11-19T06:14:26.3266425Z   GITHUB_REPO_NAME: BluebagAI/bench-gutenberg
+2026-11-19T06:14:26.3266592Z ##[endgroup]
+2026-11-19T06:14:26.3360911Z ##[start-action display=Use desired version of Node.js;id=__self.__actions_setup-node]
+2026-11-19T06:14:26.3441009Z ##[group]Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+2026-11-19T06:14:26.3441352Z with:
+2026-11-19T06:14:26.3441547Z   node-version-file: .nvmrc
+2026-11-19T06:14:26.3441763Z   check-latest: true
+2026-11-19T06:14:26.3441967Z   package-manager-cache: false
+2026-11-19T06:14:26.3443933Z   token: ***
+2026-11-19T06:14:26.3444108Z env:
+2026-11-19T06:14:26.3444304Z   BLACKSMITH_RUNNER_MESSAGE_WAIT_MS: 227
+2026-11-19T06:14:26.3444568Z   BLACKSMITH_RUNNER_ACQUIRE_JOB_MS: 868
+2026-11-19T06:14:26.3444837Z   GITHUB_REPO_NAME: BluebagAI/bench-gutenberg
+2026-11-19T06:14:26.3445096Z ##[endgroup]
+2026-11-19T06:14:26.4181794Z Node version file is not TOML file
+2026-11-19T06:14:26.4182143Z Resolved .nvmrc as 24.20
+2026-11-19T06:14:26.4184429Z Attempt to resolve the latest version from manifest...
+2026-11-19T06:14:27.6312590Z Resolved as '24.20.0'
+2026-11-19T06:14:27.6313785Z Attempting to download 24.20.0...
+2026-11-19T06:14:29.7633026Z Acquiring 24.20.0 - x64 from https://github.com/actions/node-versions/releases/download/24.20.0-33034074684/node-24.20.0-linux-x64.tar.gz
+2026-11-19T06:14:30.1564647Z Extracting ...
+2026-11-19T06:14:30.1631023Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/_work/_temp/35414957-a0e8-48e8-8509-0ac1d58b669d -f /home/runner/_work/_temp/b9cc0567-e481-4972-8e35-dcd6d8d9f415
+2026-11-19T06:14:30.9259090Z Adding to the cache ...
+2026-11-19T06:14:31.3321587Z ##[group]Environment details
+2026-11-19T06:14:31.4445289Z node: v24.20.0
+2026-11-19T06:14:31.4445535Z npm: 11.19.0
+2026-11-19T06:14:31.4445706Z yarn: 1.22.22
+2026-11-19T06:14:31.4446136Z ##[endgroup]
+2026-11-19T06:14:31.4519973Z ##[end-action id=__self.__actions_setup-node;outcome=success;conclusion=success;duration_ms=5115]
+2026-11-19T06:14:31.4522341Z ##[start-action display=Set up npm;id=__self.__self]
+2026-11-19T06:14:31.4558896Z Prepare all required actions
+2026-11-19T06:14:31.4559315Z Getting action download info
+2026-11-19T06:14:31.5759417Z ##[group]Run ./.github/setup-npm
+2026-11-19T06:14:31.5759569Z with:
+2026-11-19T06:14:31.5759679Z   cache: true
+2026-11-19T06:14:31.5759793Z   working-directory: .
+2026-11-19T06:14:31.5759914Z env:
+2026-11-19T06:14:31.5760031Z   BLACKSMITH_RUNNER_MESSAGE_WAIT_MS: 227
+2026-11-19T06:14:31.5760185Z   BLACKSMITH_RUNNER_ACQUIRE_JOB_MS: 868
+2026-11-19T06:14:31.5760348Z   GITHUB_REPO_NAME: BluebagAI/bench-gutenberg
+2026-11-19T06:14:31.5760515Z ##[endgroup]
+2026-11-19T06:14:31.6073039Z ##[start-action display=Install npm;id=__self.__self.npm]
+2026-11-19T06:14:31.6084674Z ##[group]Run NPM_VERSION="$(jq -r '.devEngines.packageManager.version // empty' package.json)"
+2026-11-19T06:14:31.6085074Z [36;1mNPM_VERSION="$(jq -r '.devEngines.packageManager.version // empty' package.json)"[0m
+2026-11-19T06:14:31.6085330Z [36;1mif [ -n "$NPM_VERSION" ]; then[0m
+2026-11-19T06:14:31.6085554Z [36;1m    # Contributors need the floor; CI stays on that major's newest release.[0m
+2026-11-19T06:14:31.6085836Z [36;1m    # Keep the bootstrap npm intact while installing its replacement.[0m
+2026-11-19T06:14:31.6086052Z [36;1m    NPM_PREFIX="$RUNNER_TEMP/npm"[0m
+2026-11-19T06:14:31.6086389Z [36;1m    npm install --global --prefix "$NPM_PREFIX" "npm@${NPM_VERSION/>=/^}"[0m
+2026-11-19T06:14:31.6086618Z [36;1m    if [ "$RUNNER_OS" = 'Windows' ]; then[0m
+2026-11-19T06:14:31.6086787Z [36;1m        NPM_BIN="$NPM_PREFIX"[0m
+2026-11-19T06:14:31.6086942Z [36;1m    else[0m
+2026-11-19T06:14:31.6087077Z [36;1m        NPM_BIN="$NPM_PREFIX/bin"[0m
+2026-11-19T06:14:31.6087230Z [36;1m    fi[0m
+2026-11-19T06:14:31.6087360Z [36;1m    echo "$NPM_BIN" >> "$GITHUB_PATH"[0m
+2026-11-19T06:14:31.6087532Z [36;1m    if [ "$RUNNER_OS" = 'Windows' ]; then[0m
+2026-11-19T06:14:31.6087710Z [36;1m        NPM_BIN="$(cygpath -u "$NPM_BIN")"[0m
+2026-11-19T06:14:31.6087868Z [36;1m    fi[0m
+2026-11-19T06:14:31.6087998Z [36;1m    export PATH="$NPM_BIN:$PATH"[0m
+2026-11-19T06:14:31.6088156Z [36;1m    hash -r[0m
+2026-11-19T06:14:31.6088304Z [36;1m    echo "Required npm version: $NPM_VERSION"[0m
+2026-11-19T06:14:31.6088468Z [36;1melse[0m
+2026-11-19T06:14:31.6088651Z [36;1m    echo "No devEngines.packageManager.version, keeping the bundled npm."[0m
+2026-11-19T06:14:31.6088862Z [36;1mfi[0m
+2026-11-19T06:14:31.6089006Z [36;1mecho "Installed npm version: $(npm --version)"[0m
+2026-11-19T06:14:31.6089176Z [36;1m[0m
+2026-11-19T06:14:31.6089345Z [36;1m# actions/setup-node cannot restore the npm cache: it locates the[0m
+2026-11-19T06:14:31.6089609Z [36;1m# directory with `npm config get cache`, which runs before this step[0m
+2026-11-19T06:14:31.6089855Z [36;1m# and fails the devEngines check under the bundled npm.[0m
+2026-11-19T06:14:31.6090085Z [36;1m# Consumer jobs may test Node versions below the repository's[0m
+2026-11-19T06:14:31.6090333Z [36;1m# devEngines floor. A global lookup does not enforce that floor.[0m
+2026-11-19T06:14:31.6090615Z [36;1mecho "cache-dir=$(npm config get cache --global | tr -d '\r')" >> "$GITHUB_OUTPUT"[0m
+2026-11-19T06:14:31.6090836Z [36;1m[0m
+2026-11-19T06:14:31.6091009Z [36;1m# Keep the hashFiles patterns workspace-relative and free of a "./"[0m
+2026-11-19T06:14:31.6091262Z [36;1m# prefix, so they match the same files as every other cache key.[0m
+2026-11-19T06:14:31.6091458Z [36;1mPATH_PREFIX=""[0m
+2026-11-19T06:14:31.6091651Z [36;1mif [ "$WORKING_DIRECTORY" != '.' ] && [ -n "$WORKING_DIRECTORY" ]; then[0m
+2026-11-19T06:14:31.6091871Z [36;1m    PATH_PREFIX="${WORKING_DIRECTORY%/}/"[0m
+2026-11-19T06:14:31.6092032Z [36;1mfi[0m
+2026-11-19T06:14:31.6092190Z [36;1mecho "path-prefix=$PATH_PREFIX" >> "$GITHUB_OUTPUT"[0m
+2026-11-19T06:14:31.6107145Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-19T06:14:31.6107336Z env:
+2026-11-19T06:14:31.6107464Z   BLACKSMITH_RUNNER_MESSAGE_WAIT_MS: 227
+2026-11-19T06:14:31.6107626Z   BLACKSMITH_RUNNER_ACQUIRE_JOB_MS: 868
+2026-11-19T06:14:31.6107799Z   GITHUB_REPO_NAME: BluebagAI/bench-gutenberg
+2026-11-19T06:14:31.6108122Z   WORKING_DIRECTORY: .
+2026-11-19T06:14:31.6108246Z ##[endgroup]
+2026-11-19T06:14:33.9296758Z 
+2026-11-19T06:14:33.9301194Z added 1 package in 2s
+2026-11-19T06:14:33.9301347Z 
+2026-11-19T06:14:33.9301728Z 15 packages are looking for funding
+2026-11-19T06:14:33.9301995Z   run `npm fund` for details
+2026-11-19T06:14:33.9438018Z Required npm version: >=11.18.0
+2026-11-19T06:14:33.9973927Z Installed npm version: 11.21.3
+2026-11-19T06:14:34.0565366Z ##[end-action id=__self.__self.npm;outcome=success;conclusion=success;duration_ms=2449]
+2026-11-19T06:14:34.0567214Z ##[start-action display=Cache npm downloads;id=__self.__self.__actions_cache]
+2026-11-19T06:14:34.0942130Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+2026-11-19T06:14:34.0942383Z with:
+2026-11-19T06:14:34.0942537Z   path: /home/runner/.npm
+2026-11-19T06:14:34.0942782Z   key: npm-cache-Linux-X64-5f5d52e6e830045303feaf50c3a51ae9d1af541dc41841b3a3b2555a1f8aaac3
+2026-11-19T06:14:34.0943038Z   restore-keys: npm-cache-Linux-X64-
+
+2026-11-19T06:14:34.0943202Z   enableCrossOsArchive: false
+2026-11-19T06:14:34.0943347Z   fail-on-cache-miss: false
+2026-11-19T06:14:34.0943493Z   lookup-only: false
+2026-11-19T06:14:34.0943618Z   save-always: false
+2026-11-19T06:14:34.0943740Z env:
+2026-11-19T06:14:34.0943857Z   BLACKSMITH_RUNNER_MESSAGE_WAIT_MS: 227
+2026-11-19T06:14:34.0944022Z   BLACKSMITH_RUNNER_ACQUIRE_JOB_MS: 868
+2026-11-19T06:14:34.0944186Z   GITHUB_REPO_NAME: BluebagAI/bench-gutenberg
+2026-11-19T06:14:34.0944353Z ##[endgroup]
+2026-11-19T06:14:34.4169311Z Cache not found for input keys: npm-cache-Linux-X64-5f5d52e6e830045303feaf50c3a51ae9d1af541dc41841b3a3b2555a1f8aaac3, npm-cache-Linux-X64-
+2026-11-19T06:14:34.4209045Z ##[end-action id=__self.__self.__actions_cache;outcome=success;conclusion=success;duration_ms=364]
+2026-11-19T06:14:34.4234021Z ##[end-action id=__self.__self;outcome=success;conclusion=success;duration_ms=2971]
+2026-11-19T06:14:34.4236749Z ##[start-action display=Get Node.js and npm version;id=__self.node-version]
+2026-11-19T06:14:34.4252127Z ##[group]Run echo "NODE_VERSION=$(node -v)" >> "$GITHUB_OUTPUT"
+2026-11-19T06:14:34.4252651Z [36;1mecho "NODE_VERSION=$(node -v)" >> "$GITHUB_OUTPUT"[0m
+2026-11-19T06:14:34.4253032Z [36;1mecho "NPM_VERSION=$(npm -v)" >> "$GITHUB_OUTPUT"[0m
+2026-11-19T06:14:34.4270376Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-19T06:14:34.4270657Z env:
+2026-11-19T06:14:34.4270852Z   BLACKSMITH_RUNNER_MESSAGE_WAIT_MS: 227
+2026-11-19T06:14:34.4271117Z   BLACKSMITH_RUNNER_ACQUIRE_JOB_MS: 868
+2026-11-19T06:14:34.4271385Z   GITHUB_REPO_NAME: BluebagAI/bench-gutenberg
+2026-11-19T06:14:34.4271628Z ##[endgroup]
+2026-11-19T06:14:34.4747285Z ##[end-action id=__self.node-version;outcome=success;conclusion=success;duration_ms=51]
+2026-11-19T06:14:34.4748963Z ##[start-action display=Cache node_modules;id=__self.cache-node_modules]
+2026-11-19T06:14:34.5106562Z ##[group]Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+2026-11-19T06:14:34.5106771Z with:
+2026-11-19T06:14:34.5107115Z   path: node_modules
+packages/*/node_modules
+routes/*/node_modules
+storybook/node_modules
+test/*/node_modules
+!test/ai-development/node_modules
+tools/*/node_modules
+widgets/*/node_modules
+
+2026-11-19T06:14:34.5107630Z   key: node_modules-Linux-X64-v24.20.0-npm-11.21.3-90bd4500fa96ba1d36f4bf65e94482b58acde62398351eb44aea0766d13356c5
+2026-11-19T06:14:34.5107914Z   enableCrossOsArchive: false
+2026-11-19T06:14:34.5108059Z   fail-on-cache-miss: false
+2026-11-19T06:14:34.5108203Z   lookup-only: false
+2026-11-19T06:14:34.5108328Z   save-always: false
+2026-11-19T06:14:34.5108448Z env:
+2026-11-19T06:14:34.5108572Z   BLACKSMITH_RUNNER_MESSAGE_WAIT_MS: 227
+2026-11-19T06:14:34.5108729Z   BLACKSMITH_RUNNER_ACQUIRE_JOB_MS: 868
+2026-11-19T06:14:34.5108889Z   GITHUB_REPO_NAME: BluebagAI/bench-gutenberg
+2026-11-19T06:14:34.5109045Z ##[endgroup]
+2026-11-19T06:14:34.8106245Z Cache hit for: node_modules-Linux-X64-v24.20.0-npm-11.21.3-90bd4500fa96ba1d36f4bf65e94482b58acde62398351eb44aea0766d13356c5
+2026-11-19T06:14:35.3033662Z Received 357895767 of 357895767 (100.0%), 724.7 MBs/sec
+2026-11-19T06:14:35.3043634Z Cache Size: ~341 MB (357895767 B)
+2026-11-19T06:14:35.3088985Z [command]/usr/bin/tar -xf /home/runner/_work/_temp/a1af5d98-9c02-40b9-862a-9c675c70a59e/cache.tzst -P -C /home/runner/_work/bench-gutenberg/bench-gutenberg --use-compress-program unzstd
+2026-11-19T06:14:37.3667525Z Cache restored successfully
+2026-11-19T06:14:37.3901882Z Cache restored from key: node_modules-Linux-X64-v24.20.0-npm-11.21.3-90bd4500fa96ba1d36f4bf65e94482b58acde62398351eb44aea0766d13356c5
+2026-11-19T06:14:37.3962856Z ##[end-action id=__self.cache-node_modules;outcome=success;conclusion=success;duration_ms=2921]
+2026-11-19T06:14:37.3964499Z ##[start-action display=Install npm dependencies;id=__self.__run]
+2026-11-19T06:14:37.3969890Z ##[end-action id=__self.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-11-19T06:14:37.3971097Z ##[start-action display=Upload npm logs as an artifact on failure;id=__self.__actions_upload-artifact]
+2026-11-19T06:14:37.3974949Z ##[end-action id=__self.__actions_upload-artifact;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-11-19T06:14:37.3976223Z ##[start-action display=Post-install;id=__self.__run_2]
+2026-11-19T06:14:37.3986689Z ##[group]Run # Run the post-install script for the root project.
+2026-11-19T06:14:37.3986949Z [36;1m# Run the post-install script for the root project.[0m
+2026-11-19T06:14:37.3987144Z [36;1mnpm run postinstall[0m
+2026-11-19T06:14:37.3987310Z [36;1m# Run the post-install scripts for workspaces.[0m
+2026-11-19T06:14:37.3987503Z [36;1mnpm exec --no -- lerna run postinstall[0m
+2026-11-19T06:14:37.3999103Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-19T06:14:37.3999283Z env:
+2026-11-19T06:14:37.3999408Z   BLACKSMITH_RUNNER_MESSAGE_WAIT_MS: 227
+2026-11-19T06:14:37.3999568Z   BLACKSMITH_RUNNER_ACQUIRE_JOB_MS: 868
+2026-11-19T06:14:37.3999742Z   GITHUB_REPO_NAME: BluebagAI/bench-gutenberg
+2026-11-19T06:14:37.3999904Z ##[endgroup]
+2026-11-19T06:14:37.4632140Z 
+2026-11-19T06:14:37.4632777Z > gutenberg@24.4.0 postinstall
+2026-11-19T06:14:37.4633182Z > npm run agents:setup -- --if-safe
+2026-11-19T06:14:37.4633376Z 
+2026-11-19T06:14:37.5202382Z 
+2026-11-19T06:14:37.5202948Z > gutenberg@24.4.0 agents:setup
+2026-11-19T06:14:37.5203417Z > npm run --workspace @wordpress/agent-tools setup -- --if-safe
+2026-11-19T06:14:37.5203669Z 
+2026-11-19T06:14:37.6204371Z 
+2026-11-19T06:14:37.6205200Z > @wordpress/agent-tools@0.0.0 setup
+2026-11-19T06:14:37.6205751Z > node ./setup-skills.mjs --if-safe
+2026-11-19T06:14:37.6206060Z 
+2026-11-19T06:14:37.6439469Z Generated: .claude/skills
+2026-11-19T06:14:38.2056712Z lerna notice cli v10.1.1
+2026-11-19T06:14:38.5719085Z lerna info versioning independent
+2026-11-19T06:14:38.5719341Z lerna info ci enabled
+2026-11-19T06:14:38.5722037Z lerna success run No packages found with the lifecycle script 'postinstall'
+2026-11-19T06:14:38.5989013Z ##[end-action id=__self.__run_2;outcome=success;conclusion=success;duration_ms=1201]
+2026-11-19T06:14:38.6004607Z ##[group]Run npm run build
+2026-11-19T06:14:38.6004785Z [36;1mnpm run build[0m
+2026-11-19T06:14:38.6018068Z shell: /usr/bin/bash -e {0}
+2026-11-19T06:14:38.6018226Z env:
+2026-11-19T06:14:38.6018356Z   BLACKSMITH_RUNNER_MESSAGE_WAIT_MS: 227
+2026-11-19T06:14:38.6018523Z   BLACKSMITH_RUNNER_ACQUIRE_JOB_MS: 868
+2026-11-19T06:14:38.6018694Z   GITHUB_REPO_NAME: BluebagAI/bench-gutenberg
+2026-11-19T06:14:38.6018858Z ##[endgroup]
+2026-11-19T06:14:38.6610944Z 
+2026-11-19T06:14:38.6611453Z > gutenberg@24.4.0 build
+2026-11-19T06:14:38.6611907Z > npm run --workspace @wordpress/build-scripts build:all --
+2026-11-19T06:14:38.6612148Z 
+2026-11-19T06:14:38.7549219Z 
+2026-11-19T06:14:38.7549745Z > @wordpress/build-scripts@0.0.0 build:all
+2026-11-19T06:14:38.7549983Z > node ./build.mjs
+2026-11-19T06:14:38.7550067Z 
+2026-11-19T06:14:38.7775614Z 🔨 Starting build process...
+2026-11-19T06:14:38.7775784Z 
+2026-11-19T06:14:38.7775877Z 🔍 Checking dependencies...
+2026-11-19T06:14:38.9159174Z 
+2026-11-19T06:14:38.9159814Z    ✔ All good.
+2026-11-19T06:14:38.9218976Z 
+2026-11-19T06:14:38.9219369Z 🧹 Cleaning packages...
+2026-11-19T06:14:38.9657141Z 
+2026-11-19T06:14:38.9658359Z 📦 Building workspaces...
+2026-11-19T06:14:42.3018635Z 🔧 Generating worker placeholders...
+2026-11-19T06:14:42.3018823Z 
+2026-11-19T06:14:42.3148954Z    ✔ Created placeholder: packages/video-conversion/src/worker-code.ts
+2026-11-19T06:14:42.3153579Z    ✔ Created placeholder: packages/vips/src/worker-code.ts
+2026-11-19T06:14:42.3164167Z 
+2026-11-19T06:14:42.3164962Z 🎉 Worker placeholder generation complete! (15ms)
+2026-11-19T06:14:42.3190681Z 
+2026-11-19T06:14:42.3191414Z 📘 Building TypeScript types...
+2026-11-19T06:14:42.3191634Z 
+2026-11-19T06:14:48.4353378Z    ✔ Built TypeScript types (6116ms)
+2026-11-19T06:14:48.4353735Z 
+2026-11-19T06:14:48.4353917Z 📦 Building vendor files...
+2026-11-19T06:14:48.5224167Z 
+2026-11-19T06:14:48.5224931Z 📦 Bundling vendor scripts...
+2026-11-19T06:14:48.5225081Z 
+2026-11-19T06:14:48.5316170Z    ✔ Bundled vendor react (10ms)
+2026-11-19T06:14:48.5651211Z    ✔ Bundled vendor react-dom (33ms)
+2026-11-19T06:14:48.5702440Z    ✔ Bundled vendor react-jsx-runtime (6ms)
+2026-11-19T06:14:48.6301414Z    ✔ Bundled vendor react-19 (58ms)
+2026-11-19T06:14:49.3260314Z    ✔ Bundled vendor react-dom-19 (697ms)
+2026-11-19T06:14:49.3307905Z    ✔ Bundled vendor react-jsx-runtime-19 (5ms)
+2026-11-19T06:14:49.3458157Z 
+2026-11-19T06:14:49.3458825Z 📦 Building packages (production mode)...
+2026-11-19T06:14:49.5482247Z ⚙️ Using build concurrency: 2
+2026-11-19T06:14:49.5482462Z 
+2026-11-19T06:14:49.5483675Z 🔨 Building packages...
+2026-11-19T06:14:49.5483769Z 
+2026-11-19T06:14:49.5509685Z 📝 Phase 1: Transpiling packages...
+2026-11-19T06:14:49.5509817Z 
+2026-11-19T06:14:49.5903168Z    ✔ Transpiled babel-plugin-import-jsx-pragma (36ms)
+2026-11-19T06:14:49.5903514Z    ✔ Transpiled babel-plugin-makepot (36ms)
+2026-11-19T06:14:49.5903759Z    ✔ Transpiled block-serialization-spec-parser (36ms)
+2026-11-19T06:14:49.5903979Z    ✔ Transpiled create-block (35ms)
+2026-11-19T06:14:49.5904179Z    ✔ Transpiled browserslist-config (36ms)
+2026-11-19T06:14:49.5916550Z    ✔ Transpiled create-block-interactive-template (35ms)
+2026-11-19T06:14:49.5916912Z    ✔ Transpiled dependency-extraction-webpack-plugin (34ms)
+2026-11-19T06:14:49.5917195Z    ✔ Transpiled create-block-tutorial-template (35ms)
+2026-11-19T06:14:49.5917420Z    ✔ Transpiled docgen (35ms)
+2026-11-19T06:14:49.5917612Z    ✔ Transpiled env (34ms)
+2026-11-19T06:14:49.5917831Z    ✔ Transpiled npm-package-json-lint-config (31ms)
+2026-11-19T06:14:49.5918064Z    ✔ Transpiled postcss-themes (31ms)
+2026-11-19T06:14:49.5918271Z    ✔ Transpiled prettier-config (30ms)
+2026-11-19T06:14:49.5918510Z    ✔ Transpiled readable-js-assets-webpack-plugin (30ms)
+2026-11-19T06:14:49.5918895Z    ✔ Transpiled theme-build-tools (29ms)
+2026-11-19T06:14:49.6050268Z    ✔ Transpiled e2e-test-utils-playwright (47ms)
+2026-11-19T06:14:49.6234817Z    ✔ Transpiled asset-loader (72ms)
+2026-11-19T06:14:49.6239141Z    ✔ Transpiled base-styles (70ms)
+2026-11-19T06:14:49.6265595Z    ✔ Transpiled blob (72ms)
+2026-11-19T06:14:49.6304925Z    ✔ Transpiled autop (78ms)
+2026-11-19T06:14:49.6339573Z    ✔ Transpiled block-serialization-default-parser (79ms)
+2026-11-19T06:14:49.6361259Z    ✔ Transpiled dom-ready (80ms)
+2026-11-19T06:14:49.6411579Z    ✔ Transpiled escape-html (84ms)
+2026-11-19T06:14:49.6617795Z    ✔ Transpiled hooks (104ms)
+2026-11-19T06:14:49.6634235Z    ✔ Transpiled html-entities (106ms)
+2026-11-19T06:14:49.6687959Z    ✔ Transpiled is-shallow-equal (110ms)
+2026-11-19T06:14:49.6706597Z    ✔ Transpiled kebab-case (112ms)
+2026-11-19T06:14:49.6751071Z    ✔ Transpiled latex-to-mathml (114ms)
+2026-11-19T06:14:49.6805677Z    ✔ Transpiled priority-queue (119ms)
+2026-11-19T06:14:49.6844885Z    ✔ Transpiled private-apis (123ms)
+2026-11-19T06:14:49.6866195Z    ✔ Transpiled react-inert-value (125ms)
+2026-11-19T06:14:49.6906603Z    ✔ Transpiled shortcode (128ms)
+2026-11-19T06:14:49.6929216Z    ✔ Transpiled style-runtime (130ms)
+2026-11-19T06:14:49.7033614Z    ✔ Transpiled redux-routine (142ms)
+2026-11-19T06:14:49.7055734Z    ✔ Transpiled token-list (143ms)
+2026-11-19T06:14:49.7088096Z    ✔ Transpiled warning (146ms)
+2026-11-19T06:14:49.7213935Z    ✔ Transpiled worker-threads (158ms)
+2026-11-19T06:14:49.7758746Z    ✔ Transpiled url (213ms)
+2026-11-19T06:14:49.7956476Z    ✔ Transpiled wordcount (233ms)
+2026-11-19T06:14:49.8127577Z    ✔ Transpiled design-system-mcp (256ms)
+2026-11-19T06:14:49.8174900Z    ✔ Transpiled report-flaky-tests (256ms)
+2026-11-19T06:14:49.8449740Z    ✔ Transpiled interactivity (287ms)
+2026-11-19T06:14:49.8787772Z    ✔ Transpiled style-engine (316ms)
+2026-11-19T06:14:49.8849271Z    ✔ Transpiled babel-preset-default (6ms)
+2026-11-19T06:14:49.8850364Z    ✔ Transpiled postcss-plugins-preset (5ms)
+2026-11-19T06:14:49.8850751Z    ✔ Transpiled stylelint-config (5ms)
+2026-11-19T06:14:49.8850963Z    ✔ Transpiled wp-build (4ms)
+2026-11-19T06:14:49.8871112Z    ✔ Transpiled deprecated (8ms)
+2026-11-19T06:14:49.9040344Z    ✔ Transpiled element (24ms)
+2026-11-19T06:14:49.9129895Z    ✔ Transpiled i18n (33ms)
+2026-11-19T06:14:49.9180585Z    ✔ Transpiled route (38ms)
+2026-11-19T06:14:49.9218021Z    ✔ Transpiled undo-manager (42ms)
+2026-11-19T06:14:50.2860744Z    ✔ Transpiled video-conversion (406ms)
+2026-11-19T06:14:51.1808144Z    ✔ Transpiled vips (1301ms)
+2026-11-19T06:14:51.1964187Z    ✔ Transpiled date (15ms)
+2026-11-19T06:14:51.1993977Z    ✔ Transpiled react-i18n (17ms)
+2026-11-19T06:14:51.2060548Z    ✔ Transpiled keycodes (23ms)
+2026-11-19T06:14:51.2171710Z    ✔ Transpiled a11y (36ms)
+2026-11-19T06:14:51.3260579Z    ✔ Transpiled dom (144ms)
+2026-11-19T06:14:51.3556737Z    ✔ Transpiled api-fetch (174ms)
+2026-11-19T06:14:51.3668789Z    ✔ Transpiled primitives (184ms)
+2026-11-19T06:14:51.4027779Z    ✔ Transpiled interactivity-router (35ms)
+2026-11-19T06:14:51.4310515Z    ✔ Transpiled preferences-persistence (63ms)
+2026-11-19T06:14:52.1678639Z    ✔ Transpiled icons (800ms)
+2026-11-19T06:14:52.2154916Z    ✔ Transpiled sync (848ms)
+2026-11-19T06:14:52.3296349Z    ✔ Transpiled image-editor (962ms)
+2026-11-19T06:14:52.4660316Z    ✔ Transpiled compose (1099ms)
+2026-11-19T06:14:52.4691985Z    ✔ Transpiled e2e-tests (3ms)
+2026-11-19T06:14:52.4825114Z    ✔ Transpiled router (16ms)
+2026-11-19T06:14:52.6579192Z    ✔ Transpiled theme (191ms)
+2026-11-19T06:14:52.7420607Z    ✔ Transpiled data (276ms)
+2026-11-19T06:14:52.7592950Z    ✔ Transpiled eslint-plugin (15ms)
+2026-11-19T06:14:52.7667086Z    ✔ Transpiled data-controls (24ms)
+2026-11-19T06:14:52.7905735Z    ✔ Transpiled keyboard-shortcuts (48ms)
+2026-11-19T06:14:52.8067136Z    ✔ Transpiled viewport (63ms)
+2026-11-19T06:14:52.8449464Z    ✔ Transpiled nux (102ms)
+2026-11-19T06:14:52.8683184Z    ✔ Transpiled abilities (127ms)
+2026-11-19T06:14:52.9053276Z    ✔ Transpiled reusable-blocks (163ms)
+2026-11-19T06:14:52.9853121Z    ✔ Transpiled upload-media (242ms)
+2026-11-19T06:14:53.1514268Z    ✔ Transpiled rich-text (408ms)
+2026-11-19T06:14:54.9912318Z    ✔ Transpiled ui (2248ms)
+2026-11-19T06:14:54.9971154Z    ✔ Transpiled scripts (4ms)
+2026-11-19T06:14:55.0012094Z    ✔ Transpiled core-abilities (9ms)
+2026-11-19T06:14:55.0322700Z    ✔ Transpiled annotations (41ms)
+2026-11-19T06:14:55.1668494Z    ✔ Transpiled grid (174ms)
+2026-11-19T06:14:55.3570910Z    ✔ Transpiled blocks (365ms)
+2026-11-19T06:14:57.7778558Z    ✔ Transpiled components (2786ms)
+2026-11-19T06:14:57.8110047Z    ✔ Transpiled connectors (32ms)
+2026-11-19T06:14:57.8269138Z    ✔ Transpiled server-side-render (48ms)
+2026-11-19T06:14:57.9082627Z    ✔ Transpiled global-styles-engine (130ms)
+2026-11-19T06:14:57.9393867Z    ✔ Transpiled workflow (160ms)
+2026-11-19T06:14:58.0084161Z    ✔ Transpiled admin-ui (231ms)
+2026-11-19T06:14:58.0346517Z    ✔ Transpiled image-cropper (256ms)
+2026-11-19T06:14:58.0624384Z    ✔ Transpiled plugins (284ms)
+2026-11-19T06:14:58.1065408Z    ✔ Transpiled notices (328ms)
+2026-11-19T06:14:58.1699039Z    ✔ Transpiled preferences (391ms)
+2026-11-19T06:14:59.0956030Z    ✔ Transpiled dataviews (1317ms)
+2026-11-19T06:14:59.1660869Z    ✔ Transpiled commands (70ms)
+2026-11-19T06:14:59.2626179Z    ✔ Transpiled interface (167ms)
+2026-11-19T06:14:59.3196058Z    ✔ Transpiled widget-primitives (223ms)
+2026-11-19T06:14:59.7949105Z    ✔ Transpiled widget-dashboard (475ms)
+2026-11-19T06:15:03.6872675Z    ✔ Transpiled block-editor (4368ms)
+2026-11-19T06:15:03.7970784Z    ✔ Transpiled format-library (109ms)
+2026-11-19T06:15:04.3686672Z    ✔ Transpiled core-data (681ms)
+2026-11-19T06:15:04.4184415Z    ✔ Transpiled views (49ms)
+2026-11-19T06:15:04.4496368Z    ✔ Transpiled core-commands (81ms)
+2026-11-19T06:15:04.4680148Z    ✔ Transpiled dashboard-init (99ms)
+2026-11-19T06:15:04.5092917Z    ✔ Transpiled list-reusable-blocks (140ms)
+2026-11-19T06:15:04.6404657Z    ✔ Transpiled patterns (271ms)
+2026-11-19T06:15:04.7880868Z    ✔ Transpiled widgets (418ms)
+2026-11-19T06:15:05.3859151Z    ✔ Transpiled global-styles-ui (1017ms)
+2026-11-19T06:15:05.5863433Z    ✔ Transpiled media-editor (1217ms)
+2026-11-19T06:15:05.6760423Z    ✔ Transpiled media-fields (1306ms)
+2026-11-19T06:15:05.8268092Z    ✔ Transpiled media-utils (150ms)
+2026-11-19T06:15:05.8764869Z    ✔ Transpiled core-actions (200ms)
+2026-11-19T06:15:14.7213540Z    ✔ Transpiled block-library (9046ms)
+2026-11-19T06:15:14.7790986Z    ✔ Transpiled fields (57ms)
+2026-11-19T06:15:15.1223697Z    ✔ Transpiled customize-widgets (401ms)
+2026-11-19T06:15:15.6079334Z    ✔ Transpiled edit-widgets (886ms)
+2026-11-19T06:15:15.9654598Z    ✔ Transpiled core-fields (1244ms)
+2026-11-19T06:15:18.9963679Z    ✔ Transpiled editor (4270ms)
+2026-11-19T06:15:19.2515760Z    ✔ Transpiled lazy-editor (259ms)
+2026-11-19T06:15:19.4978996Z    ✔ Transpiled block-directory (505ms)
+2026-11-19T06:15:19.8546459Z    ✔ Transpiled edit-post (862ms)
+2026-11-19T06:15:21.4682709Z    ✔ Transpiled edit-site (2476ms)
+2026-11-19T06:15:21.6467576Z    ✔ Transpiled boot (178ms)
+2026-11-19T06:15:21.6571716Z    ✔ Transpiled edit-site-init (11ms)
+2026-11-19T06:15:21.6571883Z 
+2026-11-19T06:15:21.6572016Z 📦 Phase 2: Bundling packages...
+2026-11-19T06:15:21.6572129Z 
+2026-11-19T06:15:22.8769477Z    ✔ Bundled a11y (1219ms)
+2026-11-19T06:15:23.7575275Z    ✔ Bundled abilities (2099ms)
+2026-11-19T06:15:23.7725733Z    ✔ Bundled annotations (2113ms)
+2026-11-19T06:15:23.7861222Z    ✔ Bundled api-fetch (2127ms)
+2026-11-19T06:15:23.7943239Z    ✔ Bundled autop (2136ms)
+2026-11-19T06:15:23.8021625Z    ✔ Bundled base-styles (2144ms)
+2026-11-19T06:15:23.8127175Z    ✔ Bundled blob (2154ms)
+2026-11-19T06:15:24.4207334Z    ✔ Bundled block-directory (2758ms)
+2026-11-19T06:15:25.1087660Z    ✔ Bundled block-editor (3446ms)
+2026-11-19T06:15:25.5917963Z    ✔ Bundled block-serialization-default-parser (3932ms)
+2026-11-19T06:15:25.6021809Z    ✔ Bundled block-library (3944ms)
+2026-11-19T06:15:25.6085016Z    ✔ Bundled block-serialization-spec-parser (3948ms)
+2026-11-19T06:15:25.7175747Z    ✔ Bundled blocks (4053ms)
+2026-11-19T06:15:25.9967423Z    ✔ Bundled boot (4330ms)
+2026-11-19T06:15:26.1163467Z    ✔ Bundled commands (4457ms)
+2026-11-19T06:15:26.7616735Z    ✔ Bundled compose (5101ms)
+2026-11-19T06:15:26.8046875Z    ✔ Bundled connectors (5145ms)
+2026-11-19T06:15:26.8382189Z    ✔ Bundled core-abilities (5178ms)
+2026-11-19T06:15:26.8721232Z    ✔ Bundled components (5212ms)
+2026-11-19T06:15:27.0756523Z    ✔ Bundled core-actions (5416ms)
+2026-11-19T06:15:27.1598281Z    ✔ Bundled core-commands (5500ms)
+2026-11-19T06:15:27.5208340Z    ✔ Bundled core-data (5855ms)
+2026-11-19T06:15:29.8090116Z    ✔ Bundled core-fields (8149ms)
+2026-11-19T06:15:30.1604340Z    ✔ Bundled dashboard-init (8501ms)
+2026-11-19T06:15:30.1794960Z    ✔ Bundled customize-widgets (8520ms)
+2026-11-19T06:15:30.1907518Z    ✔ Bundled data (8531ms)
+2026-11-19T06:15:30.2022084Z    ✔ Bundled data-controls (8543ms)
+2026-11-19T06:15:30.2127817Z    ✔ Bundled date (8552ms)
+2026-11-19T06:15:30.2198512Z    ✔ Bundled deprecated (8559ms)
+2026-11-19T06:15:30.2428024Z    ✔ Bundled dom (8582ms)
+2026-11-19T06:15:30.2485190Z    ✔ Bundled dom-ready (8588ms)
+2026-11-19T06:15:30.8007594Z    ✔ Bundled edit-post (9128ms)
+2026-11-19T06:15:31.1923473Z    ✔ Bundled edit-site-init (9532ms)
+2026-11-19T06:15:31.5031986Z    ✔ Bundled edit-site (9842ms)
+2026-11-19T06:15:31.8892796Z    ✔ Bundled edit-widgets (10228ms)
+2026-11-19T06:15:32.2555474Z    ✔ Bundled element (10595ms)
+2026-11-19T06:15:32.2952129Z    ✔ Bundled escape-html (10634ms)
+2026-11-19T06:15:32.7206203Z    ✔ Bundled editor (11056ms)
+2026-11-19T06:15:32.8477608Z    ✔ Bundled hooks (11187ms)
+2026-11-19T06:15:32.8503586Z    ✔ Bundled format-library (11190ms)
+2026-11-19T06:15:32.8597694Z    ✔ Bundled html-entities (11199ms)
+2026-11-19T06:15:32.8854660Z    ✔ Bundled i18n (11225ms)
+2026-11-19T06:15:32.9183345Z    ✔ Bundled interactivity (11258ms)
+2026-11-19T06:15:32.9524328Z    ✔ Bundled interactivity-router (11291ms)
+2026-11-19T06:15:32.9641141Z    ✔ Bundled is-shallow-equal (11302ms)
+2026-11-19T06:15:32.9795065Z    ✔ Bundled keyboard-shortcuts (11318ms)
+2026-11-19T06:15:32.9930733Z    ✔ Bundled keycodes (11331ms)
+2026-11-19T06:15:33.0612762Z    ✔ Bundled latex-to-mathml (11400ms)
+2026-11-19T06:15:33.0954468Z    ✔ Bundled lazy-editor (11434ms)
+2026-11-19T06:15:33.1349031Z    ✔ Bundled list-reusable-blocks (11471ms)
+2026-11-19T06:15:33.9114600Z    ✔ Bundled media-utils (12249ms)
+2026-11-19T06:15:34.1011935Z    ✔ Bundled nux (12439ms)
+2026-11-19T06:15:34.1403293Z    ✔ Bundled notices (12468ms)
+2026-11-19T06:15:34.5876548Z    ✔ Bundled patterns (12926ms)
+2026-11-19T06:15:34.6338647Z    ✔ Bundled plugins (12972ms)
+2026-11-19T06:15:34.7364517Z    ✔ Bundled preferences (13075ms)
+2026-11-19T06:15:34.7430765Z    ✔ Bundled preferences-persistence (13079ms)
+2026-11-19T06:15:34.7557658Z    ✔ Bundled primitives (13093ms)
+2026-11-19T06:15:34.7866122Z    ✔ Bundled priority-queue (13125ms)
+2026-11-19T06:15:34.8001465Z    ✔ Bundled private-apis (13138ms)
+2026-11-19T06:15:34.8205571Z    ✔ Bundled react-i18n (13159ms)
+2026-11-19T06:15:34.8357203Z    ✔ Bundled redux-routine (13174ms)
+2026-11-19T06:15:34.8496266Z    ✔ Bundled reusable-blocks (13188ms)
+2026-11-19T06:15:34.8787088Z    ✔ Bundled rich-text (13217ms)
+2026-11-19T06:15:34.9083927Z    ✔ Bundled route (13247ms)
+2026-11-19T06:15:34.9234102Z    ✔ Bundled router (13262ms)
+2026-11-19T06:15:34.9412605Z    ✔ Bundled server-side-render (13280ms)
+2026-11-19T06:15:34.9522753Z    ✔ Bundled shortcode (13290ms)
+2026-11-19T06:15:34.9906687Z    ✔ Bundled style-engine (13327ms)
+2026-11-19T06:15:35.0302294Z    ✔ Bundled theme (13367ms)
+2026-11-19T06:15:35.0386262Z    ✔ Bundled token-list (13376ms)
+2026-11-19T06:15:35.0536618Z    ✔ Bundled undo-manager (13391ms)
+2026-11-19T06:15:35.1156515Z    ✔ Bundled upload-media (13453ms)
+2026-11-19T06:15:35.1387620Z    ✔ Bundled url (13476ms)
+2026-11-19T06:15:35.1599668Z    ✔ Bundled video-conversion (13496ms)
+2026-11-19T06:15:35.1767201Z    ✔ Bundled viewport (13514ms)
+2026-11-19T06:15:35.2402592Z    ✔ Bundled warning (13577ms)
+2026-11-19T06:15:35.3229819Z    ✔ Bundled widget-primitives (13660ms)
+2026-11-19T06:15:35.4443908Z    ✔ Bundled vips (13780ms)
+2026-11-19T06:15:35.7612017Z    ✔ Bundled wordcount (14099ms)
+2026-11-19T06:15:35.7688918Z    ✔ Bundled widgets (14103ms)
+2026-11-19T06:15:36.0679687Z    ✔ Bundled workflow (14405ms)
+2026-11-19T06:15:36.0680765Z 
+2026-11-19T06:15:36.0680906Z 🚦 Phase 3: Building routes...
+2026-11-19T06:15:36.0681016Z 
+2026-11-19T06:15:36.0718876Z    ✔ Built route lock-unlock (3ms)
+2026-11-19T06:15:36.6127843Z    ✔ Built route fonts-home (539ms)
+2026-11-19T06:15:36.6535403Z    ✔ Built route home (585ms)
+2026-11-19T06:15:36.6874926Z    ✔ Built route dashboard (619ms)
+2026-11-19T06:15:36.7038483Z    ✔ Built route pattern (635ms)
+2026-11-19T06:15:36.7110281Z    ✔ Built route navigation (642ms)
+2026-11-19T06:15:36.7292886Z    ✔ Built route post-edit (661ms)
+2026-11-19T06:15:36.7363162Z    ✔ Built route post (667ms)
+2026-11-19T06:15:36.7797917Z    ✔ Built route post-new (711ms)
+2026-11-19T06:15:36.7878098Z    ✔ Built route template (719ms)
+2026-11-19T06:15:37.2163079Z    ✔ Built route template-part (1148ms)
+2026-11-19T06:15:38.7322502Z    ✔ Built route connectors-home (2654ms)
+2026-11-19T06:15:39.3645996Z    ✔ Built route font-list (3296ms)
+2026-11-19T06:15:39.7368936Z    ✔ Built route guidelines (3668ms)
+2026-11-19T06:15:40.2440034Z    ✔ Built route experiments-home (4175ms)
+2026-11-19T06:15:40.6816638Z    ✔ Built route identity (4613ms)
+2026-11-19T06:15:41.1118454Z    ✔ Built route navigation-list (5042ms)
+2026-11-19T06:15:41.5927621Z    ✔ Built route media-editor (5521ms)
+2026-11-19T06:15:41.8767766Z    ✔ Built route navigation-edit (5804ms)
+2026-11-19T06:15:42.3327291Z    ✔ Built route pattern-list (6262ms)
+2026-11-19T06:15:42.8310631Z    ✔ Built route post-list (6762ms)
+2026-11-19T06:15:43.2676251Z    ✔ Built route site-health (7199ms)
+2026-11-19T06:15:43.6245467Z    ✔ Built route styles (7549ms)
+2026-11-19T06:15:43.9354842Z    ✔ Built route template-list (7867ms)
+2026-11-19T06:15:44.2483404Z    ✔ Built route template-part-list (8180ms)
+2026-11-19T06:15:44.2483601Z 
+2026-11-19T06:15:44.2484515Z 🧩 Phase 4: Building widgets...
+2026-11-19T06:15:44.2484762Z 
+2026-11-19T06:15:44.2485211Z    ⚠️ Note: Widgets are still experimental and subject to drastic and breaking changes.
+2026-11-19T06:15:44.2485527Z 
+2026-11-19T06:15:44.8311963Z    ✔ Built widget activity (582ms)
+2026-11-19T06:15:45.0340797Z    ✔ Built widget hello-world (785ms)
+2026-11-19T06:15:45.3662016Z    ✔ Built widget site-health (1117ms)
+2026-11-19T06:15:45.5869585Z    ✔ Built widget site-preview (1338ms)
+2026-11-19T06:15:47.2250751Z    ✔ Built widget quick-draft (2976ms)
+2026-11-19T06:15:47.6036624Z    ✔ Built widget welcome (3355ms)
+2026-11-19T06:15:47.9687876Z    ✔ Built widget events (3714ms)
+2026-11-19T06:15:48.3473449Z    ✔ Built widget hello-dolly (4098ms)
+2026-11-19T06:15:48.6607953Z    ✔ Built widget news (4412ms)
+2026-11-19T06:15:48.6619521Z 
+2026-11-19T06:15:48.6619757Z 📄 Generating PHP registration files...
+2026-11-19T06:15:48.6619891Z 
+2026-11-19T06:15:48.6747402Z    ✔ Generated build/build.php
+2026-11-19T06:15:48.6747784Z    ✔ Generated build/modules.php
+2026-11-19T06:15:48.6748162Z    ✔ Generated build/modules/registry.php
+2026-11-19T06:15:48.6748416Z    ✔ Generated build/scripts.php
+2026-11-19T06:15:48.6748845Z    ✔ Generated build/scripts/registry.php
+2026-11-19T06:15:48.6749039Z    ✔ Generated build/styles.php
+2026-11-19T06:15:48.6749340Z    ✔ Generated build/styles/registry.php
+2026-11-19T06:15:48.6749702Z    ✔ Generated build/constants.php
+2026-11-19T06:15:48.6750015Z    ✔ Generated build/routes.php
+2026-11-19T06:15:48.6750249Z    ✔ Generated build/widgets.php
+2026-11-19T06:15:48.6750547Z    ✔ Generated build/widgets/registry.php
+2026-11-19T06:15:48.6750866Z    ✔ Generated build/pages.php
+2026-11-19T06:15:48.6751254Z    ✔ Generated build/pages/font-library/page.php
+2026-11-19T06:15:48.6751637Z    ✔ Generated build/pages/font-library/page-wp-admin.php
+2026-11-19T06:15:48.6752017Z    ✔ Generated build/pages/options-connectors/page.php
+2026-11-19T06:15:48.6757983Z    ✔ Generated build/pages/options-connectors/page-wp-admin.php
+2026-11-19T06:15:48.6758377Z    ✔ Generated build/pages/dashboard/page.php
+2026-11-19T06:15:48.6758603Z    ✔ Generated build/pages/dashboard/page-wp-admin.php
+2026-11-19T06:15:48.6758939Z    ✔ Generated build/pages/experiments/page.php
+2026-11-19T06:15:48.6759172Z    ✔ Generated build/pages/experiments/page-wp-admin.php
+2026-11-19T06:15:48.6759545Z    ✔ Generated build/pages/guidelines/page.php
+2026-11-19T06:15:48.6759845Z    ✔ Generated build/pages/guidelines/page-wp-admin.php
+2026-11-19T06:15:48.6760257Z    ✔ Generated build/pages/media-editor/page.php
+2026-11-19T06:15:48.6760494Z    ✔ Generated build/pages/media-editor/page-wp-admin.php
+2026-11-19T06:15:48.6760931Z    ✔ Generated build/pages/site-editor-v2/page.php
+2026-11-19T06:15:48.6761283Z    ✔ Generated build/pages/site-editor-v2/page-wp-admin.php
+2026-11-19T06:15:48.6761631Z    ✔ Generated build/pages/theme-preview/page.php
+2026-11-19T06:15:48.6761992Z    ✔ Generated build/pages/theme-preview/page-wp-admin.php
+2026-11-19T06:15:48.6762124Z 
+2026-11-19T06:15:48.6762280Z 🎉 All packages built successfully! (59126ms total)
+2026-11-19T06:15:51.4995116Z 
+2026-11-19T06:15:51.4996726Z 📦 Building blocks manifests...
+2026-11-19T06:15:51.8154376Z 
+2026-11-19T06:15:51.8155609Z 📦 Building workspace :wp targets...
+2026-11-19T06:15:52.1967598Z 
+2026-11-19T06:15:52.1968753Z 🎉 Build completed successfully! (73s total)
+2026-11-19T06:15:52.2097095Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-11-19T06:15:52.2097377Z with:
+2026-11-19T06:15:52.2097514Z   name: build-output
+2026-11-19T06:15:52.2098165Z   path: build
+packages/*/build
+packages/*/build-module
+packages/*/build-style
+packages/*/build-types
+packages/*/build-wp
+packages/*/src/library/*.tsx
+packages/*/src/library/index.ts
+packages/*/src/worker-code.ts
+packages/block-serialization-spec-parser/parser.js
+packages/block-serialization-spec-parser/parser.php
+
+2026-11-19T06:15:52.2098818Z   retention-days: 3
+2026-11-19T06:15:52.2098968Z   if-no-files-found: error
+2026-11-19T06:15:52.2099106Z   overwrite: true
+2026-11-19T06:15:52.2099306Z   compression-level: 6
+2026-11-19T06:15:52.2099505Z   include-hidden-files: false
+2026-11-19T06:15:52.2099744Z   archive: true
+2026-11-19T06:15:52.2099906Z env:
+2026-11-19T06:15:52.2100056Z   BLACKSMITH_RUNNER_MESSAGE_WAIT_MS: 227
+2026-11-19T06:15:52.2100241Z   BLACKSMITH_RUNNER_ACQUIRE_JOB_MS: 868
+2026-11-19T06:15:52.2100483Z   GITHUB_REPO_NAME: BluebagAI/bench-gutenberg
+2026-11-19T06:15:52.2100682Z ##[endgroup]
+2026-11-19T06:15:53.7236474Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-19T06:15:53.7237084Z The least common ancestor is /home/runner/_work/bench-gutenberg/bench-gutenberg. This will be the root directory of the artifact
+2026-11-19T06:15:53.7237446Z With the provided path, there will be 29930 files uploaded
+2026-11-19T06:15:53.9755547Z Artifact name is valid!
+2026-11-19T06:15:53.9755882Z Root directory input is valid!
+2026-11-19T06:15:54.4552679Z Uploading artifact: build-output.zip
+2026-11-19T06:15:54.4564664Z Beginning upload of artifact content to blob storage
+2026-11-19T06:15:55.9239845Z Uploaded bytes 8388608
+2026-11-19T06:15:56.4436740Z Uploaded bytes 16777216
+2026-11-19T06:15:56.6985769Z Uploaded bytes 25165824
+2026-11-19T06:15:58.0540329Z Uploaded bytes 33554432
+2026-11-19T06:15:58.1728325Z Uploaded bytes 41943040
+2026-11-19T06:15:59.0229491Z Uploaded bytes 50331648
+2026-11-19T06:16:00.3707395Z Uploaded bytes 58720256
+2026-11-19T06:16:01.4447509Z Uploaded bytes 67108864
+2026-11-19T06:16:02.6244259Z Uploaded bytes 75497472
+2026-11-19T06:16:03.7266412Z Uploaded bytes 83886080
+2026-11-19T06:16:04.1747384Z Uploaded bytes 92274688
+2026-11-19T06:16:04.9006186Z Uploaded bytes 100663296
+2026-11-19T06:16:05.7054754Z Uploaded bytes 108593381
+2026-11-19T06:16:05.7605006Z Finished uploading artifact content to blob storage!
+2026-11-19T06:16:05.7608881Z SHA256 digest of uploaded artifact is 37f1909cf031461b7f5dfd846dbbc634e392907b883479bd4a3f2b0101fe5ed0
+2026-11-19T06:16:05.7609674Z Finalizing artifact upload
+2026-11-19T06:16:06.2687130Z Artifact build-output successfully finalized. Artifact ID 14504610593
+2026-11-19T06:16:06.2687550Z Artifact build-output has been successfully uploaded! Final size is 108593381 bytes. Artifact ID is 14504610593
+2026-11-19T06:16:06.2688003Z Artifact download URL: https://github.com/BluebagAI/bench-gutenberg/actions/runs/44470685397/artifacts/14504610593
+2026-11-19T06:16:06.2917750Z Post job cleanup.
+2026-11-19T06:16:06.2929208Z ##[start-action display=Cache npm downloads;id=__dab1f935-f482-485d-b401-6c1963e32280.__actions_cache]
+2026-11-19T06:16:06.3254100Z Post job cleanup.
+2026-11-19T06:16:06.3837715Z [warning]Input required and not supplied: path
+2026-11-19T06:16:06.3870732Z ##[end-action id=__dab1f935-f482-485d-b401-6c1963e32280.__actions_cache;outcome=success;conclusion=success;duration_ms=94]
+2026-11-19T06:16:06.3872749Z ##[start-action display=Cache node_modules;id=__dab1f935-f482-485d-b401-6c1963e32280.cache-node_modules]
+2026-11-19T06:16:06.4195501Z Post job cleanup.
+2026-11-19T06:16:06.4844946Z Cache hit occurred on the primary key node_modules-Linux-X64-v24.20.0-npm-11.21.3-90bd4500fa96ba1d36f4bf65e94482b58acde62398351eb44aea0766d13356c5, not saving cache.
+2026-11-19T06:16:06.4877440Z ##[end-action id=__dab1f935-f482-485d-b401-6c1963e32280.cache-node_modules;outcome=success;conclusion=success;duration_ms=100]
+2026-11-19T06:16:06.4879745Z ##[start-action display=Use desired version of Node.js;id=__dab1f935-f482-485d-b401-6c1963e32280.__actions_setup-node]
+2026-11-19T06:16:06.4908561Z Post job cleanup.
+2026-11-19T06:16:06.5577998Z ##[end-action id=__dab1f935-f482-485d-b401-6c1963e32280.__actions_setup-node;outcome=success;conclusion=success;duration_ms=69]
+2026-11-19T06:16:06.5625222Z Post job cleanup.
+2026-11-19T06:16:06.6082396Z [command]/usr/local/bin/git version
+2026-11-19T06:16:06.6114177Z git version 2.55.0
+2026-11-19T06:16:06.6132154Z Temporarily overriding HOME='/home/runner/_work/_temp/1baec7e8-5e78-4c43-adf5-82061242ecf4' before making global git config changes
+2026-11-19T06:16:06.6132875Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-19T06:16:06.6135937Z [command]/usr/local/bin/git config --global --add safe.directory /home/runner/_work/bench-gutenberg/bench-gutenberg
+2026-11-19T06:16:06.6162275Z Removing SSH command configuration
+2026-11-19T06:16:06.6166692Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-19T06:16:06.6190286Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-19T06:16:06.6300965Z Removing HTTP extra header
+2026-11-19T06:16:06.6305116Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-19T06:16:06.6332886Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-19T06:16:06.6437965Z Removing includeIf entries pointing to credentials config files
+2026-11-19T06:16:06.6444751Z [command]/usr/local/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-19T06:16:06.6472641Z [command]/usr/local/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-19T06:16:06.6633070Z A job completed hook has been configured by the self-hosted runner administrator
+2026-11-19T06:16:06.6652883Z ##[group]Run '/job_completed.sh'
+2026-11-19T06:16:06.6662512Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-19T06:16:06.6662805Z env:
+2026-11-19T06:16:06.6663003Z   BLACKSMITH_RUNNER_MESSAGE_WAIT_MS: 227
+2026-11-19T06:16:06.6663257Z   BLACKSMITH_RUNNER_ACQUIRE_JOB_MS: 868
+2026-11-19T06:16:06.6663504Z   BLACKSMITH_CHECK_RUN_ID: 135379121746
+2026-11-19T06:16:06.6663730Z   BLACKSMITH_JOB_DISPLAY_NAME: Build (blacksmith-4)
+2026-11-19T06:16:06.6663909Z   GITHUB_ACTIONS_CACHE_MODE: write
+2026-11-19T06:16:06.6664054Z ##[endgroup]
+2026-11-19T06:16:06.6759159Z Docker container cache not activated, skipping hash computation.
+2026-11-19T06:16:06.6985572Z No active SSH sessions detected. Proceeding with shutdown immediately.
+2026-11-19T06:16:06.7028354Z Cleaning up orphan processes
